@@ -2,17 +2,22 @@
     "name": "ferfabricio/hydratate-with-setters",
     "description": "Hydratate your object with class setters",
     "type": "library",
+    "keywords": [
+        "hydratate",
+        "object creation",
+        "design patterns"
+    ],
     "require-dev": {
-        "phpunit/phpunit": "^8.0"
+        "phpunit/phpunit": "~6.5.13"
     },
     "autoload": {
         "psr-4": {
-            "FerFabricio\\Hydratate": "src/"
+            "FerFabricio\\Hydratate\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "FerFabricio\\Hydratate\\Tests": "tests/"
+            "FerFabricio\\Hydratate\\Tests\\": "tests/"
         }
     },
     "license": "MIT",
@@ -23,5 +28,7 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {}
+    "require": {
+        "php": "^7.0"
+    }
 }
