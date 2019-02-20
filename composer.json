@@ -1,0 +1,17 @@
+{
+    "name": "ferfabricio/hydratate-with-setters",
+    "description": "Hydratate your object with class setters",
+    "type": "library",
+    "require-dev": {
+        "phpunit/phpunit": "^8.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fernando Fabricio dos Santos",
+            "email": "ferfabricio@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
