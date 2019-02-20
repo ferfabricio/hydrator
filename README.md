@@ -4,6 +4,10 @@ PHP Library to hydratate objects with class setters
 
 ## Instalation
 
+```
+composer require ferfabricio/hydratate-with-setters
+```
+
 ## How use
 
 If you have a class like this:
