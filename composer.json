@@ -1,5 +1,5 @@
 {
-    "name": "ferfabricio/hydratate-with-setters",
+    "name": "ferfabricio/hydratator",
     "description": "Hydratate your object with class setters",
     "type": "library",
     "keywords": [
