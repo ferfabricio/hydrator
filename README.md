@@ -1,11 +1,11 @@
-# hydratate-with-setters
+# Hydratator
 
 PHP Library to hydratate objects with class setters
 
 ## Instalation
 
 ```
-composer require ferfabricio/hydratate-with-setters
+composer require ferfabricio/hydratator
 ```
 
 ## How use
