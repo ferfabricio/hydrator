@@ -32,4 +32,11 @@ class ExtractTest extends TestCase
         $this->expectExceptionMessage('toArray param require a object.');
         Extract::toArray('test');
     }
+
+    public function testWithNullPropertyRemoval()
+    {
+        $example = new Example();
+        $result = Extract::toArray($example, true);
+        $this->assertSame($result, []);
+    }
 }

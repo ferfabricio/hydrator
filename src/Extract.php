@@ -8,7 +8,7 @@ class Extract
 {
     use MethodExtractor;
 
-    public static function toArray($object)
+    public static function toArray($object, $removeNull = false)
     {
         if (is_object($object)) {
             $methods = self::extractAndFilter($object, 'get');
@@ -17,6 +17,10 @@ class Extract
                 $tmpData = $object->{$getter}();
                 if (is_object($tmpData)) {
                     $tmpData = self::toArray($tmpData);
+                }
+
+                if ($removeNull && is_null($tmpData)) {
+                    continue;
                 }
 
                 $result[self::getPropertyName($getter)] = $tmpData;
