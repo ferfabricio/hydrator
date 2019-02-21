@@ -1,8 +1,8 @@
 <?php
 
-namespace FerFabricio\Hydratate\Tests;
+namespace FerFabricio\Hydratator\Tests;
 
-use FerFabricio\Hydratate\Hydratate;
+use FerFabricio\Hydratator\Hydratate;
 use PHPUnit\Framework\TestCase;
 
 class HydratateTest extends TestCase

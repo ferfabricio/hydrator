@@ -1,6 +1,6 @@
 <?php
 
-namespace FerFabricio\Hydratate\Tests;
+namespace FerFabricio\Hydratator\Tests;
 
 class Example
 {
