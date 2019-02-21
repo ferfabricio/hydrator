@@ -2,22 +2,11 @@
 
 namespace FerFabricio\Hydratator;
 
+use FerFabricio\Hydratator\Traits\MethodExtractor;
+
 class Hydratate
 {
-    private static function getSetters($className)
-    {
-        $avaibleMethods = \get_class_methods($className);
-        $reducer = function ($acc, $method) {
-            if (\substr($method, 0, 3) === 'set') {
-                array_push($acc, $method);
-                return $acc;
-            }
-
-            return $acc;
-        };
-
-        return array_reduce($avaibleMethods, $reducer, []);
-    }
+    use MethodExtractor;
 
     private static function getSetterName($key)
     {
@@ -26,8 +15,8 @@ class Hydratate
 
     public static function toObject($className, $source)
     {
-        $setters = self::getSetters($className);
         $finalObj = new $className;
+        $setters = self::extractAndFilter($finalObj, 'set');
         foreach ($source as $key => $value) {
             $setterName = self::getSetterName($key);
             if (in_array($setterName, $setters)) {

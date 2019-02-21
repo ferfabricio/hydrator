@@ -2,6 +2,8 @@
 
 namespace FerFabricio\Hydratator\Tests;
 
+use FerFabricio\Hydratator\Extract;
+
 class Example
 {
     private $test;
@@ -14,5 +16,10 @@ class Example
     public function getTest()
     {
         return $this->test;
+    }
+
+    public function toArray()
+    {
+        return Extract::toArray($this);
     }
 }
