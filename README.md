@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ferfabricio/hydratator.svg?branch=master)](https://travis-ci.org/ferfabricio/hydratator) [![codecov](https://codecov.io/gh/ferfabricio/hydratator/branch/master/graph/badge.svg)](https://codecov.io/gh/ferfabricio/hydratator)
+
 # Hydratator
 
 PHP Library to hydratate objects with class setters
