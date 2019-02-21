@@ -11,11 +11,6 @@ matrix:
 env:
   matrix:
     - DRIVER="xdebug" DEPENDENCIES="high"
-    - DRIVER="phpdbg" DEPENDENCIES="high"
-    - DRIVER="pcov"   DEPENDENCIES="high"
-    - DRIVER="xdebug" DEPENDENCIES="low"
-    - DRIVER="phpdbg" DEPENDENCIES="low"
-    - DRIVER="pcov"   DEPENDENCIES="low"
   global:
     - DEFAULT_COMPOSER_FLAGS="--no-interaction --no-ansi --no-progress --no-suggest"
 
@@ -25,7 +20,6 @@ before_install:
 
 install:
   - if [[ "$DEPENDENCIES" = 'high' ]]; then travis_retry composer update $DEFAULT_COMPOSER_FLAGS; fi
-  - if [[ "$DEPENDENCIES" = 'low' ]]; then travis_retry composer update $DEFAULT_COMPOSER_FLAGS --prefer-lowest; fi
 
 before_script:
   - |
@@ -42,7 +36,6 @@ before_script:
      fi
 
 script:
-  - if [[ "$DRIVER" = 'phpdbg' ]]; then phpdbg -qrr vendor/bin/phpunit -c phpunit.xml --coverage-clover=coverage.xml; fi
   - if [[ "$DRIVER" != 'phpdbg' ]]; then vendor/bin/phpunit -c phpunit.xml --coverage-clover=coverage.xml; fi
 
 after_success:
