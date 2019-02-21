@@ -19,24 +19,10 @@ before_install:
   - composer clear-cache
 
 install:
-  - if [[ "$DEPENDENCIES" = 'high' ]]; then travis_retry composer update $DEFAULT_COMPOSER_FLAGS; fi
-
-before_script:
-  - |
-     if [[ "$DRIVER" = 'pcov' ]]; then
-       echo > $HOME/.phpenv/versions/$TRAVIS_PHP_VERSION/etc/conf.d/xdebug.ini
-       git clone https://github.com/krakjoe/pcov
-       cd pcov
-       git checkout v1.0.0
-       phpize
-       ./configure
-       make clean install
-       echo "extension=pcov.so" > $HOME/.phpenv/versions/$TRAVIS_PHP_VERSION/etc/conf.d/pcov.ini
-       cd $TRAVIS_BUILD_DIR
-     fi
+  - composer update $DEFAULT_COMPOSER_FLAGS
 
 script:
-  - if [[ "$DRIVER" != 'phpdbg' ]]; then vendor/bin/phpunit -c phpunit.xml --coverage-clover=coverage.xml; fi
+  - vendor/bin/phpunit -c phpunit.xml --coverage-clover=coverage.xml
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
