@@ -1,6 +1,6 @@
 <?php
 
-namespace FerFabricio\Hydratator\Traits;
+namespace FerFabricio\Hydrator\Traits;
 
 trait MethodExtractor
 {
