@@ -2,7 +2,7 @@
 
 # Hydrator
 
-PHP Library to hydratate objects with class setters
+PHP Library to hydrate objects with class setters
 
 ## Instalation
 
@@ -39,10 +39,10 @@ $myData = [
 ];
 ```
 
-You can use `FerFabricio\Hydratate\Hydratate` to do this work in a simple way:
+You can use `FerFabricio\Hydrate\Hydrate` to do this work in a simple way:
 
 ```
-use FerFabricio\Hydratate\Hydratate;
+use FerFabricio\Hydratate\Hydrate;
 
 class Example
 {
