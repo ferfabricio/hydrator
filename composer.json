@@ -1,9 +1,9 @@
 {
-    "name": "ferfabricio/hydratator",
-    "description": "Hydratate your object with class setters",
+    "name": "ferfabricio/hydrator",
+    "description": "Hydrate your object with class setters",
     "type": "library",
     "keywords": [
-        "hydratator",
+        "hydrator",
         "object creation",
         "design patterns"
     ],
@@ -12,12 +12,12 @@
     },
     "autoload": {
         "psr-4": {
-            "FerFabricio\\Hydratator\\": "src/"
+            "FerFabricio\\Hydrator\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "FerFabricio\\Hydratator\\Tests\\": "tests/"
+            "FerFabricio\\Hydrator\\Tests\\": "tests/"
         }
     },
     "license": "MIT",

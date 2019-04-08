@@ -1,10 +1,10 @@
 <?php
 
-namespace FerFabricio\Hydratator;
+namespace FerFabricio\Hydrator;
 
-use FerFabricio\Hydratator\Traits\MethodExtractor;
+use FerFabricio\Hydrator\Traits\MethodExtractor;
 
-class Hydratate
+class Hydrate
 {
     use MethodExtractor;
 

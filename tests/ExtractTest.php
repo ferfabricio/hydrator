@@ -1,8 +1,8 @@
 <?php
 
-namespace FerFabricio\Hydratator\Tests;
+namespace FerFabricio\Hydrator\Tests;
 
-use FerFabricio\Hydratator\Extract;
+use FerFabricio\Hydrator\Extract;
 use PHPUnit\Framework\TestCase;
 
 class ExtractTest extends TestCase
