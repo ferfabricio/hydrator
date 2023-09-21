@@ -10,7 +10,10 @@ class Hydrate
 
     private static function getSetterName($key)
     {
-        return 'set' . ucwords($key);
+        if (str_contains($key, '_')) {
+            return sprintf('set%s', ucwords(str_replace(' ', '', ucwords(str_replace('_', ' ', $key)))));
+        }
+        return sprintf('set%s', ucwords($key));
     }
 
     public static function toObject($className, $source)
