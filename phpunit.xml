@@ -1,12 +1,14 @@
-<phpunit bootstrap="vendor/autoload.php">
+<?xml version="1.0"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" bootstrap="vendor/autoload.php" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.3/phpunit.xsd" cacheDirectory=".phpunit.cache">
+  <coverage/>
   <testsuites>
     <testsuite name="default">
       <directory>tests</directory>
     </testsuite>
   </testsuites>
-  <filter>
-    <whitelist>
+  <source>
+    <include>
       <directory suffix=".php">src/</directory>
-    </whitelist>
-  </filter>
+    </include>
+  </source>
 </phpunit>

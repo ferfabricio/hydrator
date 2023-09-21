@@ -39,10 +39,10 @@ $myData = [
 ];
 ```
 
-You can use `FerFabricio\Hydrate\Hydrate` to do this work in a simple way:
+You can use `FerFabricio\Hydrator\Hydrate` to do this work in a simple way:
 
 ```
-use FerFabricio\Hydratate\Hydrate;
+use FerFabricio\Hydrator\Hydrate;
 
 class Example
 {
