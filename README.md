@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/ferfabricio/hydrator.svg?branch=master)](https://travis-ci.org/ferfabricio/hydrator) [![codecov](https://codecov.io/gh/ferfabricio/hydrator/branch/master/graph/badge.svg)](https://codecov.io/gh/ferfabricio/hydrator)
+[![codecov](https://codecov.io/gh/ferfabricio/hydrator/branch/master/graph/badge.svg)](https://codecov.io/gh/ferfabricio/hydrator)
 
 # Hydrator
 
